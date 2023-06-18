@@ -4,9 +4,9 @@ VAlUES(1,'Trevor Page','266-555-4982'),
 
 INSERT INTO pizza_list(pizza_id, pizza_name, pizza_cost)
 VALUE(1,'Peperoni & Chesse',7.99),
-	(2,'Vegetarian',9.99),
-    (3,'Meat Lovers',14.99),
-    (4,'Hawaiian',12.99);
+		(2,'Vegetarian',9.99),
+		(3,'Meat Lovers',14.99),
+		(4,'Hawaiian',12.99);
 select * from orders;
 
 INSERT INTO orders(`order #`, `customer_id`,`pizza_id`,`quantity`,`date`)
