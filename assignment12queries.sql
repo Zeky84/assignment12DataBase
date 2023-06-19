@@ -7,12 +7,12 @@ GROUP BY
 ORDER BY total_spent_by_customer DESC;
 
 -- Q5: Query to know how much money each customer spent including the date and order number
-SELECT o.order_number, c.customer_name, SUM(p.pizza_cost * o.quantity) AS total_spent_by_customer, o.`date` 
+SELECT o.order_number, c.customer_name, SUM(p.pizza_cost * o.quantity) AS total_spent_by_customer, DATE(o.`date`) as `date`
 FROM orders o
   JOIN customers c ON o.customer_id = c.customer_id
   JOIN pizzas p ON o.pizza_id = p.pizza_id
 GROUP BY
-  o.order_number, c.customer_id, c.customer_name, o.`date`
+  o.order_number, c.customer_id, c.customer_name, `date`
 ORDER BY  o.order_number;
 
 -- Joining all tables for understanding
