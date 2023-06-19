@@ -13,7 +13,7 @@ FROM orders o
   JOIN pizzas p ON o.pizza_id = p.pizza_id
 GROUP BY
   o.order_number, c.customer_id, c.customer_name, `date`
-ORDER BY  o.order_number;
+ORDER BY  `date` DESC;
 
 -- Joining all tables for understanding
 select * from orders o
